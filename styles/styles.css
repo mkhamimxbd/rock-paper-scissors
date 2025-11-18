@@ -1,0 +1,75 @@
+html, body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #5c2b17;
+  color: #F6F1E9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-title {
+  font-size: 50px;
+  padding: 0 0 80px 0;
+}
+
+.moves-div {
+  padding: 0 0 30px 0;
+}
+
+.move-btn {
+  background-color: #292929;
+  font-size: 42px;
+  border: 3px solid #FFD93D;
+  border-radius: 18px;
+  padding: 6px;
+  margin: 0 12px;
+  transition: all 0.15s ease;
+  
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 14px #F6F1E9;
+    transform: translateY(-1px);
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "IBM plex mono", "Roboto",Arial, Helvetica, sans-serif;
+  padding: 0 0 20px 0;
+}
+
+.js-result-el {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.reset-score-btn {
+  font-size: 14px;
+  background-color: #9b1d1d;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  transition: all 0.15s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #be2828;
+  }
+}

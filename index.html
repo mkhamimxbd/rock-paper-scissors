@@ -4,34 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
   <title>Rock Paper Scissors</title>
 </head>
 
 <body>
-  <p class="game-title">Rock Paper Scissors</p>
-  <button id="rock-btn move-btn" onclick="
+  <main>
+    <h1 class="game-title">Rock Paper Scissors</h1>
+    <div class="moves-div">
+      <button class="rock-btn move-btn" onclick="
     playGame('rock');
-  ">Rock</button>
-  <button class="Paper-btn move-btn" onclick="
+  ">✊</button>
+      <button class="Paper-btn move-btn" onclick="
     playGame('paper');
-  ">Paper</button>
-  <button class="scissors-btn move-btn" onclick="
+  ">✋</button>
+      <button class="scissors-btn move-btn" onclick="
     playGame('scissors');
-  ">Scissors</button>
+  ">✌️</button>
+    </div>
 
+    <div class="stats">
+      <p class="js-result-el">Play!</p>
+      <p class="js-moves-el">Built by M. K. Hamim</p>
+      <p class="js-score-el"></p>
+    </div>
 
-  <p class="js-result-el"></p>
-  <p class="js-moves-el"></p>
-  <p class="js-score-el"></p>
-
-  <button class="reset-score-btn" onclick="
+    <button class="reset-score-btn" onclick="
     score.wins = 0;
     score.losses = 0;
     score.ties = 0;
     localStorage.removeItem('score');
     updateScoreElement();
   ">Reset Score</button>
+  </main>
 
 
   <script src="scripts/script.js"></script>
