@@ -116,11 +116,10 @@ main {
   }
 }
 
-.reset-score-btn {
+.reset-score-btn, 
+.auto-play-btn {
   font-size: 14px;
-  background-color: #9b1d1d;
   font-weight: 600;
-  color: white;
   border: none;
   border-radius: 10px;
   padding: 12px 14px;
@@ -128,12 +127,29 @@ main {
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+.reset-score-btn {
+  background-color: #9b1d1d;
+  color: white;
+
+  &:hover {
     background-color: #be2828;
   }
 }
 
+.auto-play-btn {
+  background-color: #d3d3d3;
+
+  &:hover {
+    background-color: #ffffff;
+  }
+}
+
 @media (max-width: 600px) {
-  .reset-score-btn {
+  .reset-score-btn,
+  .auto-play-btn {
     font-size: 22px;
     padding: 16px 20px;
   }

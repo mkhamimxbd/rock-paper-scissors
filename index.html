@@ -35,13 +35,16 @@
   ">✌️</button>
     </div>
 
-    <button class="reset-score-btn" onclick="
+    <div class="bottom-btns">
+      <button class="reset-score-btn" onclick="
     score.wins = 0;
     score.losses = 0;
     score.ties = 0;
     localStorage.removeItem('score');
     updateScoreElement();
   ">Reset Score</button>
+      <button class="auto-play-btn">Auto Play</button>
+    </div>
   </main>
 
 
