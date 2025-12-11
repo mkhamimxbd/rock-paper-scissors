@@ -78,9 +78,21 @@ function pickComputerMove() {
   return computerMove;
 }
 
+const autoPlayBtnText = document.querySelector('.auto-play-btn');
+let isAutoPlaying = false;
+let intervalId;
+
 function autoPlay() {
-  setInterval(function () {
-    const playerMove = pickComputerMove();
-    playGame(playerMove);
-  }, 1200);
+  if (!isAutoPlaying) {
+    intervalId = setInterval(function () {
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 1200);
+    isAutoPlaying = true;
+    autoPlayBtnText.textContent = 'Stop Play';
+  } else {
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+    autoPlayBtnText.textContent = 'Auto Play';
+  }
 }
