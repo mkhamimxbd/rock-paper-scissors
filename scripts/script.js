@@ -11,30 +11,30 @@ function playGame(playerMove) {
 
   const computerMove = pickComputerMove();
 
-  if (playerMove === 'scissors') {
+  if (playerMove === '✌️') {
 
-    if (computerMove === 'rock') {
+    if (computerMove === '✊') {
       result = 'You lose.';
-    } else if (computerMove === 'paper') {
+    } else if (computerMove === '✋') {
       result = 'You won!';
-    } else if (computerMove === 'scissors') {
+    } else if (computerMove === '✌️') {
       result = 'Tie.';
     }
 
-  } else if (playerMove === 'paper') {
-    if (computerMove === 'rock') {
+  } else if (playerMove === '✋') {
+    if (computerMove === '✊') {
       result = 'You won!';
-    } else if (computerMove === 'paper') {
+    } else if (computerMove === '✋') {
       result = 'Tie.';
-    } else if (computerMove === 'scissors') {
+    } else if (computerMove === '✌️') {
       result = 'You lose.';
     }
-  } else if (playerMove === 'rock') {
-    if (computerMove === 'rock') {
+  } else if (playerMove === '✊') {
+    if (computerMove === '✊') {
       result = 'Tie.';
-    } else if (computerMove === 'paper') {
+    } else if (computerMove === '✋') {
       result = 'You lose.';
-    } else if (computerMove === 'scissors') {
+    } else if (computerMove === '✌️') {
       result = 'You won!';
     }
   }
@@ -68,11 +68,11 @@ function pickComputerMove() {
   let computerMove = '';
 
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    computerMove = 'rock';
+    computerMove = '✊';
   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    computerMove = 'paper';
+    computerMove = '✋';
   } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
-    computerMove = 'scissors';
+    computerMove = '✌️';
   }
 
   return computerMove;
