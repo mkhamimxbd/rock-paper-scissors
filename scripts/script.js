@@ -99,6 +99,10 @@ document.querySelector('.js-reset-score-btn').addEventListener('click', () => {
   updateScoreElement();
 });
 
+document.querySelector('.js-auto-play-btn').addEventListener('click', () => {
+  autoPlay();
+});
+
 const autoPlayBtnText = document.querySelector('.auto-play-btn');
 let isAutoPlaying = false;
 let intervalId;
