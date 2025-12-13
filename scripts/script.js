@@ -78,6 +78,19 @@ function pickComputerMove() {
   return computerMove;
 }
 
+document.querySelector('.js-rock-btn')
+  .addEventListener('click', () => {
+    playGame('rock');
+  });
+document.querySelector('.js-paper-btn')
+  .addEventListener('click', () => {
+    playGame('paper');
+  });
+document.querySelector('.js-scissors-btn')
+  .addEventListener('click', () => {
+    playGame('scissors');
+  });
+
 const autoPlayBtnText = document.querySelector('.auto-play-btn');
 let isAutoPlaying = false;
 let intervalId;
