@@ -91,6 +91,14 @@ document.querySelector('.js-scissors-btn')
     playGame('scissors');
   });
 
+document.querySelector('.js-reset-score-btn').addEventListener('click', () => {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score');
+  updateScoreElement();
+});
+
 const autoPlayBtnText = document.querySelector('.auto-play-btn');
 let isAutoPlaying = false;
 let intervalId;
