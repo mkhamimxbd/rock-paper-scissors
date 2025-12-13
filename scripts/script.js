@@ -100,20 +100,28 @@ document.body.addEventListener('keydown', (event) => {
     playGame('scissors');
   } else if (event.key === 'a') {
     autoPlay();
+  } else if (event.key === 'Backspace') {
+    resetScore();
   }
 });
 
+
+
 document.querySelector('.js-reset-score-btn').addEventListener('click', () => {
-  score.wins = 0;
-  score.losses = 0;
-  score.ties = 0;
-  localStorage.removeItem('score');
-  updateScoreElement();
+  resetScore();
 });
 
 document.querySelector('.js-auto-play-btn').addEventListener('click', () => {
   autoPlay();
 });
+
+function resetScore () {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem('score');
+  updateScoreElement();
+}
 
 const autoPlayBtnText = document.querySelector('.auto-play-btn');
 let isAutoPlaying = false;
@@ -133,3 +141,7 @@ function autoPlay() {
     autoPlayBtnText.textContent = 'Auto Play';
   }
 }
+
+// document.body.addEventListener('keydown', () => {
+//   console.log(event.key);
+// })
